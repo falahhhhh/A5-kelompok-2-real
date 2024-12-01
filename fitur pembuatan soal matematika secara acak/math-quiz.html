@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Matematika Acak</title>
+    <!-- Link ke file CSS -->
+    <link rel="stylesheet" href="math-quiz.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Soal Matematika Acak</h1>
+        </header>
+        <div class="question-area">
+            <p id="question">Tekan tombol untuk memulai soal!</p>
+            <input type="number" id="answer" placeholder="Masukkan jawaban Anda">
+            <button id="submitAnswer">Kirim Jawaban</button>
+        </div>
+        <footer>
+            <button id="generateQuestion">Buat Soal Baru</button>
+            <p id="feedback"></p>
+        </footer>
+    </div>
+
+    <script>
+        // Elemen DOM
+        const questionElement = document.getElementById('question');
+        const answerElement = document.getElementById('answer');
+        const feedbackElement = document.getElementById('feedback');
+        const generateQuestionButton = document.getElementById('generateQuestion');
+        const submitAnswerButton = document.getElementById('submitAnswer');
+
+        // Variabel global
+        let currentQuestion = {};
+        let correctAnswer = null;
+
+        // Fungsi untuk membuat soal matematika acak
+        function generateRandomQuestion() {
+            const operators = ['+', '-', '*'];
+            const num1 = Math.floor(Math.random() * 20) + 1; // Angka antara 1-20
+            const num2 = Math.floor(Math.random() * 20) + 1; // Angka antara 1-20
+            const operator = operators[Math.floor(Math.random() * operators.length)];
+
+            let result;
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+            }
+
+            currentQuestion = { num1, num2, operator };
+            correctAnswer = result;
+
+            questionElement.textContent = `Berapa hasil dari: ${num1} ${operator} ${num2}?`;
+            feedbackElement.textContent = '';
+            answerElement.value = '';
+        }
+
+        // Fungsi untuk memeriksa jawaban
+        function checkAnswer() {
+            const userAnswer = parseInt(answerElement.value, 10);
+            if (isNaN(userAnswer)) {
+                feedbackElement.textContent = 'Masukkan jawaban yang valid!';
+                feedbackElement.style.color = 'red';
+                return;
+            }
+
+            if (userAnswer === correctAnswer) {
+                feedbackElement.textContent = 'Benar! Jawaban Anda tepat.';
+                feedbackElement.style.color = 'green';
+            } else {
+                feedbackElement.textContent = `Salah! Jawaban yang benar adalah ${correctAnswer}.`;
+                feedbackElement.style.color = 'red';
+            }
+        }
+
+        // Event Listeners
+        generateQuestionButton.addEventListener('click', generateRandomQuestion);
+        submitAnswerButton.addEventListener('click', checkAnswer);
+    </script>
+</body>
+</html>
