@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Deklarasi tipe dokumen dan bahasa HTML yang digunakan -->
+<head>
+    <meta charset="UTF-8"> <!-- Menentukan karakter encoding sebagai UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsif untuk perangkat seluler -->
+    <title>Math Quiz Game</title> <!-- Judul halaman yang muncul di tab browser -->
+    <link rel="stylesheet" href="style.css"> <!-- Menyisipkan file CSS eksternal -->
+</head>
+<body>
+    <div class="container"> <!-- Pembungkus utama konten halaman -->
+        <header class="header"> <!-- Header halaman -->
+            <h1>Math Quiz Game</h1> <!-- Judul game yang ditampilkan di halaman -->
+        </header>
+
+        <div class="game-settings"> <!-- Bagian untuk pengaturan permainan -->
+            <label for="difficulty">Pilih Tingkat Kesulitan:</label> <!-- Label untuk dropdown tingkat kesulitan -->
+            <select id="difficulty"> <!-- Dropdown untuk memilih tingkat kesulitan -->
+                <option value="1">Mudah</option> <!-- Pilihan tingkat kesulitan mudah -->
+                <option value="2">Sedang</option> <!-- Pilihan tingkat kesulitan sedang -->
+                <option value="3">Sulit</option> <!-- Pilihan tingkat kesulitan sulit -->
+            </select>
+            <button id="startGame">Mulai Permainan</button> <!-- Tombol untuk memulai permainan -->
+        </div>
+
+        <div class="game-area hidden"> <!-- Area permainan (disembunyikan awalnya dengan class "hidden") -->
+            <p id="question"></p> <!-- Tempat menampilkan pertanyaan matematika -->
+            <input type="number" id="answer" placeholder="Jawaban Anda"> <!-- Input untuk jawaban pengguna -->
+            <button id="submitAnswer">Kirim Jawaban</button> <!-- Tombol untuk mengirim jawaban -->
+            <p id="feedback"></p> <!-- Tempat menampilkan umpan balik (benar/salah) -->
+            <p>Sisa waktu: <span id="timer"></span> detik</p> <!-- Timer waktu permainan -->
+        </div>
+
+        <footer class="footer hidden"> <!-- Footer untuk menampilkan hasil permainan -->
+            <p>Permainan selesai! Skor Anda: <span id="score"></span></p> <!-- Menampilkan skor akhir -->
+            <button id="restartGame">Main Lagi</button> <!-- Tombol untuk memulai permainan baru -->
+        </footer>
+    </div>
+
+    <script src="index.php"></script> <!-- Menyisipkan file PHP eksternal untuk logika game -->
+</body>
+</html>
