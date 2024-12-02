@@ -1,0 +1,63 @@
+/* Gaya Umum */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Area Reset */
+.reset-area {
+    margin-top: 20px;
+}
+
+#resetMessage {
+    font-size: 18px;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+/* Tombol */
+button {
+    background: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#cancelReset {
+    background: #f44336;
+}
+
+#cancelReset:hover {
+    background: #c62828;
+}
