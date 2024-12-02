@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemilihan Tingkat Kesulitan</title>
+    <!-- Link ke file CSS -->
+    <link rel="stylesheet" href="difficulty.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Pilih Tingkat Kesulitan</h2>
+        <form id="difficultyForm">
+            <label for="difficulty">Tingkat Kesulitan:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="1">Mudah</option>
+                <option value="2">Sedang</option>
+                <option value="3">Sulit</option>
+            </select>
+            <button type="button" id="startGame">Mulai Permainan</button>
+        </form>
+        <div class="footer">
+            <p>Semakin sulit, semakin seru!</p>
+        </div>
+    </div>
+
+    <script>
+        // Event Listener untuk tombol mulai
+        document.getElementById('startGame').addEventListener('click', function () {
+            const difficulty = document.getElementById('difficulty').value;
+            alert(`Anda memilih tingkat kesulitan: ${difficulty === '1' ? 'Mudah' : difficulty === '2' ? 'Sedang' : 'Sulit'}`);
+            // Implementasikan logika selanjutnya di sini
+        });
+    </script>
+</body>
+</html>
