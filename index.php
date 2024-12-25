@@ -22,9 +22,6 @@ require 'connection.php';
             <form method="POST" action="difficulty.php">
                 <button type="submit" name="startGame" class="start-button">Mulai Permainan</button>
             </form>
-            <form method="POST" action="resetgame.php">
-                <button type="submit" class="reset-button">Reset Permainan</button>
-            </form>
         </div>
     </div>
 </body>

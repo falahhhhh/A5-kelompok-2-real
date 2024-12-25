@@ -1,7 +1,18 @@
+
+/* Reset beberapa elemen standar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Gaya Umum */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-image: url('resetgame.jpg'); /* Ganti dengan nama file gambar Anda */
+    background-size: cover; /* Menyesuaikan ukuran gambar dengan layar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-position: center; /* Menempatkan gambar di tengah */
     margin: 0;
     padding: 0;
     display: flex;

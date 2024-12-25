@@ -8,18 +8,20 @@
 /* Set gaya dasar untuk body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f3f3f3;
+    background-image: url('math_bg.jpg'); /* Ganti dengan nama file gambar yang Anda simpan */
+    background-size: cover; /* Menyesuaikan ukuran gambar dengan layar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-position: center; /* Menempatkan gambar di tengah */
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 /* Container utama */
 .container {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Menambahkan transparansi untuk melihat gambar di bawah */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;

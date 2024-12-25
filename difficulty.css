@@ -1,7 +1,18 @@
+
+/* Reset beberapa elemen standar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Gaya untuk Halaman */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-image: url('difficulty.jpg'); /* Ganti dengan nama file gambar Anda */
+    background-size: cover; /* Menyesuaikan ukuran gambar dengan layar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-position: center; /* Menempatkan gambar di tengah */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,22 +21,25 @@ body {
     height: 100vh;
 }
 
+/* Container */
 .container {
     text-align: center;
     width: 80%;
     max-width: 400px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Transparansi untuk melihat gambar di belakang */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Judul */
 h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 15px;
 }
 
+/* Label */
 label {
     font-size: 18px;
     color: #555;
@@ -33,6 +47,7 @@ label {
     margin-bottom: 10px;
 }
 
+/* Select */
 select {
     padding: 10px;
     width: 100%;
@@ -42,6 +57,7 @@ select {
     margin-bottom: 20px;
 }
 
+/* Tombol */
 button {
     background: #4CAF50;
     color: white;
@@ -53,10 +69,12 @@ button {
     width: 100%;
 }
 
+/* Gaya tombol ketika hover */
 button:hover {
     background: #45a049;
 }
 
+/* Footer */
 .footer {
     margin-top: 20px;
     font-size: 14px;

@@ -1,17 +1,17 @@
 <?php
 session_start();
-
+require 'connection.php';
 
 // Tangani aksi reset permainan
 if (isset($_POST['confirmReset'])) {
     session_destroy(); // Hapus semua data sesi
-    header("Location: startgame.php"); // Ganti dengan halaman awal permainan
+    header("Location: index.php"); // Ganti dengan halaman awal permainan
     exit;
 }
 
 // Tangani aksi batal reset
 if (isset($_POST['cancelReset'])) {
-    header("Location: game.php"); // Ganti dengan halaman permainan
+    header("Location: endgame.php"); // Ganti dengan halaman permainan
     exit;
 }
 ?>
